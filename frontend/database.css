@@ -1,0 +1,19 @@
+.left-box {
+    display: inline-block;
+    border: 1px solid rgb(206, 205, 205); 
+    width: 20%;
+    height: 550px;
+}
+.btn {
+    display: inline-block;
+    padding: .50rem 1rem;
+    border: 1px solid #2f3332;
+    cursor: pointer;
+    background-color: rgb(255, 115, 0);
+    margin-top: 510px;
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
