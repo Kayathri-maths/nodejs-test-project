@@ -1,19 +1,74 @@
-.left-box {
-    display: inline-block;
-    border: 1px solid rgb(206, 205, 205); 
-    width: 20%;
-    height: 550px;
+body {
+  background-color: lightgray;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.btn {
-    display: inline-block;
-    padding: .50rem 1rem;
-    border: 1px solid #2f3332;
-    cursor: pointer;
-    background-color: rgb(255, 115, 0);
-    margin-top: 510px;
-    color: white;
+
+h1 {
+  text-align: center;
 }
-a {
-    text-decoration: none;
-    color: white;
+
+.sidenav {
+  height: 100%;
+  width:fit-content;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav button {
+  /* padding: 6px 8px 6px 16px; */
+  text-decoration: none;
+  font-size: large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  color: #818181;
+  display:inline;
+  cursor: pointer;
+}
+
+.sidenav button:hover {
+  color: black;
+}
+
+.sidenav p {
+  color: #f1f1f1;
+  font-size: larger;
+}
+
+.sidenav p:hover {
+  cursor: pointer;
+}
+
+.main {
+  margin-left: 160px;  
+  padding: 0px 10px;
+  width: auto;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#table-form-div {
+  width: fit-content;
+  margin: 0 auto;
+  background-color: burlywood;
+  font-weight: bold;
 }

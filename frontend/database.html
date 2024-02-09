@@ -1,18 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Database Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="database.css">
+    <title>Database Management</title>
 </head>
+
 <body>
-    <div class="left-box">
-        <form onclick="">
-            <button class="btn" type="submit">
-                <a href="table.html">+Create New Table</a></button>
-        </form>
+    <div class="sidenav">
+        <div id="tableList"></div>
+        <button id="create-table-form-btn" type="button">+Create New Table</button>
     </div>
-    
+    <div class="main">
+        <div id="table-form-div" style="display: none;">
+            <form id="table-form" action="/tableDetails/add-table" method="post">
+                <fieldset id="form-fieldset">
+                    <p>Create Table</p>
+                    <label for="table-name">Table Name </label> <br>
+                    <input type="text" id="table-name" placeholder="table name" required>
+
+                    <div class="formFields"> <br>
+                        <label for="column-name">Field Names </label>
+                        <label for="input-datatypes" style="margin-left: 30%;"> Type </label><br>
+                        <input class="column-name" id="column-name" type="text" placeholder="field name" required>
+
+                        <select name="input-datatypes" class="input-datatypes" id="input-datatypes" required>
+                            <option value="">Select an option </option>
+                            <option value="STRING"> STRING </option>
+                            <option value="INTEGER"> INTEGER </option>
+                            <option value="BOOLEAN"> BOOLEAN </option>
+                            <option value="JSON"> JSON </option>
+                            <option value="DOUBLE"> DOUBLE </option>
+                        </select>
+
+                    </div>
+
+                    <div id="form-div"></div>
+                    <button id="add-more-cloumns-btn" type="button"> Add Another Field </button> <br> <br>
+                    <button id="add-table-submit-btn" type="submit"> Create Table </button>
+                </fieldset>
+            </form>
+        </div>
+
+        <div id="insert-data-div" style="display: none;">
+            <div id="insert-btn-div" style="display: none;"></div>
+            <div id="dynamic-form">
+                <form id="data-input"></form>
+            </div>
+
+            <div id="display-table-data"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+    <script src="database.js"></script>
 </body>
+
 </html>

@@ -20,7 +20,7 @@ app.use(cors());
 
 app.use(bodyParser.json({ extended: false}));
 
-app.use('/data',dataRoutes);
+app.use('/tableDetails',dataRoutes);
 
 app.use(errorController.get404);
 
